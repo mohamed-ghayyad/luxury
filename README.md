@@ -44,8 +44,8 @@ HTML5 Shiv v3.7.0, Copyright 2014 Alexander Farkas
 Licenses: MIT/GPL2
 Source: https://github.com/aFarkas/html5shiv
 
-== Changelog ==
-= 0.2 =
+== Changelog ==<br/>
+= 0.2 =<br/>
 * Released: November 29, 2015
 
 Initial release
