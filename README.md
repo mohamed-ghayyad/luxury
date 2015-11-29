@@ -1,12 +1,12 @@
-=== Vundo ===
-Requires at least: WordPress 4.1
-Tested up to: WordPress 4.3-trunk
-Version: 0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-== Description ==
+=== Vundo ===<br/>
+Requires at least: WordPress 4.1<br/>
+Tested up to: WordPress 4.3-trunk<br/>
+Version: 0.2<br/>
+License: GPLv2 or later<br/>
+License URI: http://www.gnu.org/licenses/gpl-2.0.html<br/>
+== Description ==<br/>
 Vundo is clean , fully responsive , blog-focused and designed for clarity.Vundoâ€™s readable on a wide variety of screen sizes.I designed it using foundation web framework, meaning your content takes center-stage,regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
-
+<br/>
 * Mobile-first, Responsive Layout
 * Custom Colors
 * Custom Header
@@ -15,9 +15,9 @@ Vundo is clean , fully responsive , blog-focused and designed for clarity.Vundoâ
 * Post Formats
 * The GPL v2.0 or later license. :) Use it to make something cool.
 
-For more information about Vundo please go to https://codex.wordpress.org/Twenty_Fifteen.
+For more information about Vundo please go to https://github.com/PyXFKod/Vundo.<br/>
 
-== Installation ==
+== Installation ==<br/>
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Vundo in the search form and press the 'Enter' key on your keyboard.
@@ -27,7 +27,7 @@ For more information about Vundo please go to https://codex.wordpress.org/Twenty
 
 == Copyright ==
 
-Vundo WordPress Theme, Copyright 2015-2016 ModyDev.Club
+Vundo WordPress Theme, Copyright 2015-2016 http://ModyDev.Club
 Vundo is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -43,10 +43,6 @@ GNU General Public License for more details.
 HTML5 Shiv v3.7.0, Copyright 2014 Alexander Farkas
 Licenses: MIT/GPL2
 Source: https://github.com/aFarkas/html5shiv
-
-Genericons icon font, Copyright 2013-2015 Automattic.com
-License: GNU GPL, Version 2 (or later)
-Source: http://www.genericons.com
 
 == Changelog ==
 = 0.2 =
