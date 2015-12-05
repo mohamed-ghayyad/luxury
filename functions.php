@@ -1,6 +1,7 @@
 <?php 
 require_once 'htmlpurifier/library/HTMLPurifier.auto.php';
-
+//update_option('siteurl','http://modydev.club');
+//update_option('home','http://modydev.club');
 if ( ! isset( $content_width ) ) $content_width = 900;
 
 function theme_slug_widgets_init() {
@@ -119,9 +120,9 @@ function tags_after_single_post_content($content) {
 
 if( is_singular('post') && is_main_query() ) {
 
-$tags = the_tags('<div class="entry-meta">Tags :  ',' , ','</div><br />'); 
+$tags = the_tags(' <i class="fa fa-tags"></i> tagged with:  ',' , ','<br/>'); 
 
-$content = $content . $tags;
+$content = $content.$tags;
     }
 return $content;
 }

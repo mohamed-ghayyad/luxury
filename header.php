@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet">
 <?php wp_enqueue_script("jquery"); ?>
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
 <?php wp_head(); ?>

@@ -36,7 +36,7 @@ $comments_args = array(
     'label_submit' => 'Post Comment'
 );
 echo '<ul>';
- wp_list_comments( array( 'callback' => 'vundo_callback' ) );
+ wp_list_comments( array( 'callback' => 'luxury_callback' ) );
  echo '</ul>';
 
  paginate_comments_links();
