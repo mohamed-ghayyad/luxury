@@ -8,7 +8,7 @@
 <footer>
 <div class="callout small ft text-center">
 
-<i class="fa fa-wordpress"></i> Proudly Powered by <a href="http://wordpress.org" >WordPress</a> and Luxury Theme.
+<i class="fa fa-wordpress"></i> Proudly Powered by <a href="http://wordpress.org" >WordPress</a> and <a href="https://github.com/Mohammed-Ghiad/Luxury">Luxury Theme.</a>
 </div>
 </footer>
 </body>
