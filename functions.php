@@ -1,7 +1,5 @@
 <?php 
-require_once 'htmlpurifier/library/HTMLPurifier.auto.php';
-//update_option('siteurl','http://modydev.club');
-//update_option('home','http://modydev.club');
+
 if ( ! isset( $content_width ) ) $content_width = 900;
 
 function theme_slug_widgets_init() {
@@ -16,48 +14,7 @@ function theme_slug_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
-function contactform_luxury( $atts ){
-	$form = '<form method="post" >
-	<div class="row">
-	<div class="large-12 small-12 columns">
-       <label>Your Name:</label>
-	<input type="text" name="cname" />
-	<label>Your Email:</label>
-	<input type="text" name="cmail" />
-       <label>Subject:</label>
-	<input type="text" name="csubject" />
-	<label>Your Message:</label>
-	<textarea name="cmessaged" rows="5"></textarea>
-	<button class="button primary" type="submit">Send Message</button>
-</div></div></form>';
 
-$cname = $_POST['cname'];
-$cmail = $_POST['cmail'];
-$cmessaged = $_POST['cmessaged'];
-$csubject = $_POST['csubject'];
-
-if(isset($cname)&&isset($cmessaged)&&isset($cmail)&&isset($csubject)){
-$config = HTMLPurifier_Config::createDefault();
-$purifier = new HTMLPurifier($config);
-$clean_cmessage = $purifier->purify($cmessaged);
-if(filter_var($cmail, FILTER_VALIDATE_EMAIL)){
-if(ctype_alpha($cname)){
-if(ctype_alpha(str_replace(' ','',$csubject))){
-$headers = 'From: '.$cname.' <'.$cmail.'>' . "\r\n";
-$admin_email = get_option( 'admin_email' );
-wp_mail( $admin_email, $csubject, $clean_cmessage,$headers );
-return '<div class="callout success">Your Message has been sent successfully.</div><br/>'.$form;
-}else{return '<div class="callout alert">Subject must be letters and spacing only.</div><br/>'.$form;
-}}else{return '<div class="callout alert">Your name must be letters only.</div><br/>'.$form;
-}}else{
-return '<div class="callout alert">Invalid Email Address.</div><br/>'.$form;
-   }
-}else{	
-	return $form;
-}
-
-}
-add_shortcode( 'mwc', 'contactform_luxury' );
 function custom_theme_setup() {
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( "post-thumbnails" );
@@ -120,9 +77,6 @@ function tags_after_single_post_content($content) {
 
 if( is_singular('post') && is_main_query() ) {
 
-$tags = the_tags(' <i class="fa fa-tags"></i> tagged with:  ',' , ','<br/>'); 
-
-$content = $content.$tags;
     }
 return $content;
 }

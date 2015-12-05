@@ -14,9 +14,17 @@
 	  the_post(); 	
 	  ?>
 	  <small><i class="fa fa-calendar"></i> Published on <?php the_time('j F Y'); ?> By <i class="fa fa-user"></i> <?php the_author(); ?> - <a href="<?php comments_link(); ?>"><?php comments_number( 'no comments', 'one comment', '% comments' ); ?></a></small>
-<?php
+<br/>
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+<div class="text-center">
+<img src="<?php echo $image[0]; ?>" />
+</div>
+<?php endif; ?>
+	  <?php
 	 the_content();
 	 echo '<hr>';
+	 the_tags( ' <i class="fa fa-tags"></i> tagged with: ', ', ', '' ); 
 comments_template(); 
     }}
     ?>

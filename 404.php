@@ -8,7 +8,7 @@ get_header(); ?>
 </div>
 <div class="row" id="content">
 <div class="medium-12 columns">
-<div class="callout text-center"><img src="wp-content/themes/Luxury/img/yeti.svg" alt="Foundation"/> <h3><i class="fa fa-search"></i> 404 | Oops! That page can’t be found.</h3>
+<div class="callout text-center"><img src="wp-content/themes/Luxury/img/yeti.svg" alt="Foundation" height="200" width="242"/> <h3><i class="fa fa-search"></i> 404 | Oops! That page can’t be found.</h3>
 
 </div>
 </div>
