@@ -1,6 +1,6 @@
 === Luxury ===<br/>
 Requires at least: WordPress 4.1<br/>
-Tested up to: WordPress 4.3-trunk<br/>
+Tested up to: WordPress 4.3.1<br/>
 Version: 0.2<br/>
 License: GPLv2 or later<br/>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html<br/>
