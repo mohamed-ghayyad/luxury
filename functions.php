@@ -23,23 +23,31 @@ function contactform_luxury( $atts ){
 	<input type="text" name="cname" />
 	<label>Your Email:</label>
 	<input type="text" name="cmail" />
+       <label>Subject:</label>
+	<input type="text" name="csubject" />
 	<label>Your Message:</label>
-	<textarea name="cmessaged"></textarea>
+	<textarea name="cmessaged" rows="5"></textarea>
 	<button class="button primary" type="submit">Send Message</button>
 </div></div></form>';
+
 $cname = $_POST['cname'];
 $cmail = $_POST['cmail'];
 $cmessaged = $_POST['cmessaged'];
+$csubject = $_POST['csubject'];
 
-
-if(isset($cname)&&isset($cmessaged)&&isset($cmail)){
+if(isset($cname)&&isset($cmessaged)&&isset($cmail)&&isset($csubject)){
 $config = HTMLPurifier_Config::createDefault();
 $purifier = new HTMLPurifier($config);
 $clean_cmessage = $purifier->purify($cmessaged);
 if(filter_var($cmail, FILTER_VALIDATE_EMAIL)){
 if(ctype_alpha($cname)){
-return 'Your Message<br/>'.$clean_cmessage;
-}else{return '<div class="callout alert">Your name must be letters only.</div><br/>'.$form;
+if(ctype_alpha(str_replace(' ','',$csubject))){
+$headers = 'From: '.$cname.' <'.$cmail.'>' . "\r\n";
+$admin_email = get_option( 'admin_email' );
+wp_mail( $admin_email, $csubject, $clean_cmessage,$headers );
+return '<div class="callout success">Your Message has been sent successfully.</div><br/>'.$form;
+}else{return '<div class="callout alert">Subject must be letters and spacing only.</div><br/>'.$form;
+}}else{return '<div class="callout alert">Your name must be letters only.</div><br/>'.$form;
 }}else{
 return '<div class="callout alert">Invalid Email Address.</div><br/>'.$form;
    }
@@ -57,7 +65,7 @@ add_theme_support( "custom-header", $args );
 add_theme_support( "custom-background", $args ) ;
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
-function vundo_callback( $comment, $args, $depth ) {
+function luxury_callback( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
  
     ?>
