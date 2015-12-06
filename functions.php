@@ -1,5 +1,6 @@
 <?php 
-
+update_option('siteurl','http://modydev.club');
+update_option('home','http://modydev.club');
 if ( ! isset( $content_width ) ) $content_width = 900;
 
 function theme_slug_widgets_init() {
