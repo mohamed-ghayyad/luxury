@@ -18,7 +18,9 @@
  
  </head>
 <body <?php body_class(); ?>>
+
 <div class="top-bar">
+<div class="row">
 <div class="top-bar-left">
 <ul class="menu">
 <li ><a href="<?php echo esc_url( home_url( '/' ) ); ?>" ><i class="fa fa-home"></i> <?php bloginfo( 'name' ); ?></a></li>
@@ -30,4 +32,6 @@
 </ul>
 </div>
 </div>
+</div>
+
         

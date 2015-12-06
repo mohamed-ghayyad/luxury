@@ -3,8 +3,12 @@
 <script  src="<?php echo get_stylesheet_directory_uri(); ?>/foundation/js/foundation.min.js"></script>
 <script>
       $(document).foundation();
-
+    $(function(){
+            $(".more-link").addClass("small hollow button");
+            $(".more-link").text("Read More");
+        });
     </script>
+
 <footer>
 <div class="callout small ft text-center">
 

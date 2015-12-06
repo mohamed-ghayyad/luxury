@@ -25,17 +25,24 @@ body{
 }
 h1,h2,h3{
   font-family: 'Righteous', cursive;
-margin: 0 0 -5px 0;
+margin: 0 0 -3px 0;
+}
+.humb{
+margin:0 0 10px 0;
 }
 h3{
-    font-size: 24px; 
+    font-size: 18px; 
+ font-weight: bold;
 }
 .bg{
   background-image:url("img/mars-bg.svg");
   background-size: cover;
    background-repeat:no-repeat;
 }
-li {list-style-type: none;}
+li {
+list-style-type:none;
+ font-size: 14px; 
+}
 input[type="text"]{
  line-height: 25px;
  font-size: 15px; 

@@ -6,7 +6,9 @@
 </div>
 </div>
 <div class="row column" id="content">
-<div class="medium-9 columns">
+
+
+<div class="small-9 large-9 columns">
             <div class="blog-post callout large animated bounceInLeft" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 <?php if ( have_posts() ) { 
@@ -17,8 +19,8 @@
 <br/>
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="text-center">
-<img src="<?php echo $image[0]; ?>" />
+<div class="humb text-center">
+<img src="<?php echo $image[0]; ?>" width="100%" />
 </div>
 <?php endif; ?>
 	  <?php
@@ -32,11 +34,13 @@ comments_template();
 
 </div>
 	
-<div class="medium-3 columns" data-sticky-container>
+
+<div class="small-3 large-3 columns" data-sticky-container>
 <div class="sticky" data-sticky data-anchor="content">
 <?php get_sidebar(); ?>
 </div>
 </div>
+
 <?php wp_link_pages('before=<div id="page-links">&after=</div>'); ?>
  </div>
 <?php get_footer(); ?>

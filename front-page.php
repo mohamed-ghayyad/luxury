@@ -6,19 +6,21 @@
 </div>
 </div>
 <div class="row" id="content">
-<div class="medium-9 columns">
+
+	<div class="small-9 medium-9 columns">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <div class="blog-post callout large animated bounceInLeft">
 	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 <small><i class="fa fa-calendar"></i> Published on <?php the_time('j F Y'); ?> By <i class="fa fa-user"></i> <?php the_author(); ?> - <a href="<?php comments_link(); ?>"><?php comments_number( 'no comments', 'one comment', '% comments' ); ?></a></small>
-<br/>
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-<div class="text-center">
-<img src="<?php echo $image[0]; ?>" />
+<div class="humb text-center">
+<img src="<?php echo $image[0]; ?>" width="100%"/>
 </div>
 <?php endif; ?>
 <?php the_content(); ?>
+
 <hr/>
     <?php
     echo 'filed under : ';
@@ -37,7 +39,7 @@ the_tags( ' <i class="fa fa-tags"></i> tagged with: ', ', ', '' );
 
  
   
-<div class="medium-3 columns" data-sticky-container>
+<div class="medium-3 columns " data-sticky-container>
 <div class="sticky" data-sticky data-anchor="content">
 <?php get_sidebar(); ?>
 </div>
